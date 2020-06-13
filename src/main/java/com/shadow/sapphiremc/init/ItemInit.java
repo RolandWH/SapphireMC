@@ -105,11 +105,11 @@ public class ItemInit {
     }
 
     public enum ModArmorMaterial implements IArmorMaterial {
-        SAPPHIRE(SapphireMC.MOD_ID + ":sapphirearmor", 0, new int[] { 7, 9, 11 ,7 }, 420, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.9F, () -> {
+        SAPPHIRE(SapphireMC.MOD_ID + ":sapphirearmor", 1, new int[] { 5, 8, 10, 5 }, 420, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 4F, () -> {
             return Ingredient.fromItems(ItemInit.sapphire);
         });
 
-        private static final int[] MAX_DAMAGE_ARRAY = new int[] { 200, 200, 200, 200};
+        private static final int[] MAX_DAMAGE_ARRAY = new int[] { 663, 765, 816, 561 };
         private final String name;
         private final int maxDamageFactor;
         private final int[] damageReductionAmountArray;
