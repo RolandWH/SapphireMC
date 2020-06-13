@@ -30,3 +30,4 @@ gradle.properties
 gradle/
 gradlew
 gradlew.bat
+changelog.txt
