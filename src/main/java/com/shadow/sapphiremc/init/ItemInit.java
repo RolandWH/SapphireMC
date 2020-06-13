@@ -1,7 +1,6 @@
 package com.shadow.sapphiremc.init;
 
 import com.shadow.sapphiremc.SapphireMC;
-
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import com.shadow.sapphiremc.SapphireMC.SapphireItemGroup;
@@ -16,7 +15,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.registries.ObjectHolder;
-
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(modid = SapphireMC.MOD_ID, bus = Bus.MOD)
@@ -107,11 +105,11 @@ public class ItemInit {
     }
 
     public enum ModArmorMaterial implements IArmorMaterial {
-        SAPPHIRE(SapphireMC.MOD_ID + ":sapphirearmor", 5, new int[] { 7, 9, 11 ,7 }, 420, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.9F, () -> {
+        SAPPHIRE(SapphireMC.MOD_ID + ":sapphirearmor", 0, new int[] { 7, 9, 11 ,7 }, 420, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 6.9F, () -> {
             return Ingredient.fromItems(ItemInit.sapphire);
         });
 
-        private static final int[] MAX_DAMAGE_ARRAY = new int[] { 16, 16, 16, 16};
+        private static final int[] MAX_DAMAGE_ARRAY = new int[] { 200, 200, 200, 200};
         private final String name;
         private final int maxDamageFactor;
         private final int[] damageReductionAmountArray;

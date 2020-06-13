@@ -1,4 +1,5 @@
 package com.shadow.sapphiremc.init;
+
 import com.shadow.sapphiremc.SapphireMC.SapphireItemGroup;
 import com.shadow.sapphiremc.SapphireMC;
 import net.minecraft.block.Block;
