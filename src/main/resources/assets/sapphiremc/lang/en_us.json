@@ -1,0 +1,15 @@
+{
+  "item.sapphiremc.sapphire": "Sapphire",
+  "item.sapphiremc.sapphire_sword": "Sapphire Sword",
+  "item.sapphiremc.sapphire_axe": "Sapphire Axe",
+  "item.sapphiremc.sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.sapphiremc.sapphire_hoe": "Sapphire Hoe",
+  "item.sapphiremc.sapphire_shovel": "Sapphire Shovel",
+  "item.sapphiremc.sapphire_helmet": "Sapphire Helmet",
+  "item.sapphiremc.sapphire_chestplate": "Sapphire Chestplate",
+  "item.sapphiremc.sapphire_leggings": "Sapphire Leggings",
+  "item.sapphiremc.sapphire_boots": "Sapphire Boots",
+  "block.sapphiremc.sapphire_block": "Block of Sapphire",
+  "block.sapphiremc.sapphire_ore": "Sapphire Ore",
+  "itemGroup.sapphiretab": "SapphireMC"
+}

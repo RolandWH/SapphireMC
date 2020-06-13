@@ -1,0 +1,17 @@
+[
+    {
+        "modid": "sapphiremc",
+        "name": "SapphireMC",
+        "description": "A mod that adds a whole bunch of sapphire related things in minecraft!",
+        "version": "0.4",
+        "mcversion": "1.15.2",
+        "url": "",
+        "updateUrl": "",
+        "authorList": ["AGudMineman"],
+        "credits": "Developed by ShadowHolder/AGudMineman (Me!), textures provided by KingPenguin.",
+        "logoFile": "",
+        "screenshots": [],
+        "requiredMods": [],
+        "dependencies": []
+    }
+]

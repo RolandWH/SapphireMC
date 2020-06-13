@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " II",
+    " iI",
+    " i "
+  ],
+  "key": {
+    "I": {
+      "item": "sapphiremc:sapphire"
+    },
+    "i": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "sapphiremc:sapphire_axe"
+  }
+}
