@@ -20,8 +20,10 @@ import java.util.function.Supplier;
 @Mod.EventBusSubscriber(modid = SapphireMC.MOD_ID, bus = Bus.MOD)
 @ObjectHolder(SapphireMC.MOD_ID)
 public class ItemInit {
-    // Declare tool name
+    // Declare item name
     public static final Item sapphire = null;
+
+    // Declare tool name
     public static final Item sapphire_sword = null;
     public static final Item sapphire_pickaxe = null;
     public static final Item sapphire_axe = null;
@@ -36,6 +38,8 @@ public class ItemInit {
 
     @SubscribeEvent
     public static void registerItems(final RegistryEvent.Register<Item> event) {
+
+        // Items
         event.getRegistry().register(new Item(new Item.Properties().group(SapphireItemGroup.instance)).setRegistryName("sapphire"));
 
         // Tools
