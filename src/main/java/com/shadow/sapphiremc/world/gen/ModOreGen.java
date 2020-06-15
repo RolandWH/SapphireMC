@@ -14,7 +14,7 @@ public class ModOreGen {
     public static void generateOre() {
         for (Biome biome : ForgeRegistries.BIOMES) {
             ConfiguredPlacement modGenConfig = Placement.COUNT_RANGE.configure(new CountRangeConfig(1, 4, 0, 16));
-            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.sapphire_ore.getDefaultState(), 8)).withPlacement(modGenConfig));
+            biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockInit.sapphire_ore.getDefaultState(), 4)).withPlacement(modGenConfig));
         }
     }
 }
