@@ -1,5 +1,5 @@
-# SapphireMC
-My first Minecraft Forge mod made for 1.15.2.
+# About SapphireMC
+A mod that adds a whole bunch of sapphire related things to minecraft!
 <br/>
 
 # Requirements
