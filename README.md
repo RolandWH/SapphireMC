@@ -1,8 +1,3 @@
-<p style="align:center;">
-  <a href="https://github.com/ImAiiR/QobuzDownloaderX">
-    <img src="https://github.com/RolandWH/SapphireMC/blob/master/img/sapphire.png?raw=true" />
-  </a>
-</p>
 # SapphireMC
 My first Minecraft Forge mod made for 1.15.2.
 <br/>
