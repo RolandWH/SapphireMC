@@ -1,10 +1,12 @@
 # About SapphireMC
 A mod that adds a whole bunch of sapphire related things to minecraft!
 <br/>
+<br/>
 
 # Requirements
 Windows 7 or later.<br/>
 Forge 31.2.0
+<br/>
 <br/>
 
 # Features
