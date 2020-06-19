@@ -56,8 +56,8 @@ A mod that adds a whole bunch of sapphire related things in minecraft!
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
 # Here's another dependency
-[[dependencies.examplemod]]
-    modId="minecraft"
+[[dependencies.sapphiremc]]
+    modId="sapphiremc"
     mandatory=true
     versionRange="[1.15.2]"
     ordering="NONE"
