@@ -1,6 +1,7 @@
 package com.shadow.sapphiremc.init;
 
 import com.shadow.sapphiremc.SapphireMC;
+import com.shadow.sapphiremc.objects.items.SapphireCoal;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import com.shadow.sapphiremc.SapphireMC.SapphireItemGroup;
@@ -22,6 +23,7 @@ import java.util.function.Supplier;
 public class ItemInit {
     // Declare item name
     public static final Item sapphire = null;
+    public static final Item sapphire_coal = null;
 
     // Declare tool name
     public static final Item sapphire_sword = null;
@@ -41,6 +43,7 @@ public class ItemInit {
 
         // Items
         event.getRegistry().register(new Item(new Item.Properties().group(SapphireItemGroup.instance)).setRegistryName("sapphire"));
+        event.getRegistry().register(new SapphireCoal(new Item.Properties().group(SapphireItemGroup.instance)).setRegistryName("sapphire_coal"));
 
         // Tools
         event.getRegistry().register(new SwordItem(ModItemTier.SAPPHIRE, 3, -2.4f, new Item.Properties().group(SapphireItemGroup.instance)).setRegistryName("sapphire_sword"));
