@@ -3,7 +3,7 @@ loaderVersion="[31,)"
 
 [[mods]]
 modId="sapphiremc"
-version="0.5"
+version="0.6"
 displayName="SapphireMC"
 credits="Developed by ShadowHolder/AGudMineman (Me!), textures provided by KingPenguin"
 displayURL="https://github.com/RolandWH/SapphireMC/"
