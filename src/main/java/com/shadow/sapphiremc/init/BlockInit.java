@@ -31,6 +31,6 @@ public class BlockInit {
     @SubscribeEvent
     public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new BlockItem(sapphire_block, new Item.Properties().group(SapphireItemGroup.instance)).setRegistryName("sapphire_block"));
-        event.getRegistry().register(new BlockItem(sapphire_ore, new Item.Properties().group(SapphireItemGroup.instance)).setRegistryName("sapphire_ore"))
+        event.getRegistry().register(new BlockItem(sapphire_ore, new Item.Properties().group(SapphireItemGroup.instance)).setRegistryName("sapphire_ore"));
     }
 }
