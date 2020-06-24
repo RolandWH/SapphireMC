@@ -1,6 +1,8 @@
 package com.shadow.sapphiremc;
 import com.shadow.sapphiremc.init.BlockInit;
 import com.shadow.sapphiremc.init.ItemInit;
+import com.shadow.sapphiremc.init.ModContainerTypes;
+import com.shadow.sapphiremc.init.ModTileEntityTypes;
 import com.shadow.sapphiremc.world.gen.ModOreGen;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
@@ -42,6 +44,8 @@ public class SapphireMC
 
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
+        ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+        ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
 
         instance = this;
 

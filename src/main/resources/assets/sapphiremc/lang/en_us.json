@@ -12,5 +12,7 @@
   "item.sapphiremc.sapphire_coal": "Sapphire Infused Coal",
   "block.sapphiremc.sapphire_block": "Block of Sapphire",
   "block.sapphiremc.sapphire_ore": "Sapphire Ore",
+  "block.sapphiremc.sapphire_vault": "Sapphire Vault",
+  "container.sapphire_vault": "Sapphire Vault",
   "itemGroup.sapphiretab": "SapphireMC"
 }
