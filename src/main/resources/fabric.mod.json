@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "sapphiremc",
+  "version": "${version}",
+
+  "name": "SapphireMC",
+  "description": "A mod that adds a whole bunch of sapphire related stuff in Minecraft!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://github.com/RolandWH/SapphireMC/",
+    "sources": "https://github.com/RolandWH/SapphireMC/"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/sapphiremc/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.shadow.sapphiremc.SapphireMC"
+    ]
+  },
+  "mixins": [
+    "sapphiremc.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

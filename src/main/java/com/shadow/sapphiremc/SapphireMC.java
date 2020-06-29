@@ -1,116 +1,30 @@
 package com.shadow.sapphiremc;
+
 import com.shadow.sapphiremc.init.BlockInit;
 import com.shadow.sapphiremc.init.ItemInit;
-import com.shadow.sapphiremc.init.ModContainerTypes;
-import com.shadow.sapphiremc.init.ModTileEntityTypes;
-import com.shadow.sapphiremc.world.gen.ModOreGen;
-import net.minecraft.block.Blocks;
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.*;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.DeferredWorkQueue;
-import net.minecraftforge.fml.InterModComms;
-import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.*;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.registries.IForgeRegistry;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import java.util.stream.Collectors;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 
+import static com.shadow.sapphiremc.init.ItemInit.SAPPHIRE;
 
-// The value here should match an entry in the META-INF/mods.toml file
-@Mod("sapphiremc")
-@Mod.EventBusSubscriber(modid = SapphireMC.MOD_ID, bus = Bus.MOD)
-public class SapphireMC
-{
-    // Directly reference a log4j logger.
-    public static final Logger LOGGER = LogManager.getLogger();
-    public static final String MOD_ID = "sapphiremc";
-    public static SapphireMC instance;
+public class SapphireMC implements ModInitializer {
 
-    public SapphireMC() {
-        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        // Register these methods for modloading
-        modEventBus.addListener(this::setup);
-        modEventBus.addListener(this::enqueueIMC);
-        modEventBus.addListener(this::processIMC);
-        modEventBus.addListener(this::doClientStuff);
+    public static final ItemGroup SAPPHIRE_GROUP = FabricItemGroupBuilder.build(
+            new Identifier("sapphiremc", "general"),
+            () -> new ItemStack(SAPPHIRE));
 
-        ItemInit.ITEMS.register(modEventBus);
-        BlockInit.BLOCKS.register(modEventBus);
-        ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
-        ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
+    @Override
+    public void onInitialize() {
+        // Items
+        Registry.register(Registry.ITEM, new Identifier("sapphiremc", "sapphire"), SAPPHIRE);
 
-        instance = this;
+        // Blocks
+        Registry.register(Registry.BLOCK, new Identifier("sapphiremc", "sapphire_block"), BlockInit.SAPPHIRE_BLOCK);
 
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    // Automatically create block items
-    @SubscribeEvent
-    public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
-        final IForgeRegistry<Item> registry = event.getRegistry();
-        BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            final Item.Properties properties = new Item.Properties().group(SapphireItemGroup.instance);
-            final BlockItem blockItem = new BlockItem(block, properties);
-            blockItem.setRegistryName(block.getRegistryName());
-            registry.register(blockItem);
-        });
-
-        LOGGER.debug("Registered Block Items");
-    }
-
-    private void setup(final FMLCommonSetupEvent event)
-    {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-
-    }
-
-    private void doClientStuff(final FMLClientSetupEvent event) {
-        // do something that can only be done on the client
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
-        DeferredWorkQueue.runLater(ModOreGen::generateOre);
-    }
-
-    private void enqueueIMC(final InterModEnqueueEvent event)
-    {
-        // some example code to dispatch IMC to another mod
-        InterModComms.sendTo("sapphiremc", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
-    }
-
-    private void processIMC(final InterModProcessEvent event)
-    {
-        // some example code to receive and process InterModComms from other mods
-        LOGGER.info("Got IMC {}", event.getIMCStream().
-                map(m->m.getMessageSupplier().get()).
-                collect(Collectors.toList()));
-    }
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(FMLServerStartingEvent event) {
-        // do something when the server starts
-        LOGGER.info("HELLO from server starting");
-    }
-
-
-    public static class SapphireItemGroup extends ItemGroup {
-        public static final SapphireItemGroup instance = new SapphireItemGroup(ItemGroup.GROUPS.length, "sapphiretab");
-        private SapphireItemGroup(int index, String label) {
-            super(index, label);
-        }
-
-        @Override
-        public ItemStack createIcon() {
-            return new ItemStack(ItemInit.SAPPHIRE.get());
-        }
+        // Block Items
+        Registry.register(Registry.ITEM, new Identifier("sapphiremc", "sapphire_block"), new BlockItem(BlockInit.SAPPHIRE_BLOCK, new Item.Settings().group(SapphireMC.SAPPHIRE_GROUP)));
     }
 }
