@@ -1,29 +1,36 @@
 # gradle
-
 .gradle/
 build/
 out/
 classes/
+gradle/
+gradlew
+gradlew.bat
+settings.gradle
+
 
 # eclipse
-
 *.launch
 
-# idea
 
+# idea
 .idea/
 *.iml
 *.ipr
 *.iws
 
-# vscode
 
+# vscode
 .settings/
 .vscode/
 bin/
 .classpath
 .project
 
-# fabric
 
+# fabric
 run/
+
+
+# other
+LICENSE
