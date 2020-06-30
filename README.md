@@ -1,3 +1,9 @@
+<p style="align:center;">
+  <a href="https://github.com/RolandWH/SapphireMC/">
+    <img src="https://github.com/RolandWH/SapphireMC/blob/fabric/img/main.png?raw=true" />
+  </a>
+</p>
+
 # About SapphireMC
 A mod that adds a whole bunch of sapphire related things to minecraft!
 <br/>
